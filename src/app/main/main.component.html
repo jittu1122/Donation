@@ -1,0 +1,50 @@
+<div>
+<div class="container">
+    <div class="item">
+        <div style="padding: 40px">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="bubble top-right"><span class="needed"><b>${{principalAmount}}</b> still needed for this project</span></div>
+                </div>
+            </div>
+            <div style="margin-top: 15px">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="progress" style="border: 2px solid #E5E5E5">
+                            <div class="progress-bar" [style.width]="(donatedAmount/1000)*100 + '%'" style="background-color: #FE5606"></div>
+                        </div>
+                        <div style="border: 2px solid #E5E5E5; border-top: none">
+                            <div class="central">
+                                <div style="padding: 25px">
+                                    <p class="needed" style="color: #909090"><b style="color: #FE5606">Only 3 days left</b> to fund this project.</p>
+                                    <p class="needed" style="color: #909090">Join <b>{{donors}}</b> other donors who have already supported this project. Every dollar helps.</p>
+                                    <div class="row give-row">
+                                        <div class="col-sm-6">
+                                            <span class="needed dollar">$</span>
+                                            <input class="form-control" [(ngModel)]="inputAmount" type="number" [min]="1" [max]="1000" [maxlength]="4"/>
+                                        </div>
+                                        <div class="col-sm-6"><button class="btn btn-lg btn-success" (click)="donate()">Give Now</button></div>
+                                    </div>
+                                    <p class="needed" style="color: #009DD6;font-style: italic; margin-top: 10px">Why give $50?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px">
+                    <div class="col-sm-12 give-row">
+                        <div class="row">
+                            <div class="col-sm-6"><button class="btn btn-lg btn-light btn-bottom" (click)="saveForLater()">Save for later</button></div>
+                            <div class="col-sm-6"><button class="btn btn-lg btn-light btn-bottom" (click)="tellFriends()">Tell your friends</button></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</div>
