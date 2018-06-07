@@ -48,7 +48,7 @@ export class MainComponent implements OnInit {
       Swal('Saved !', 'Successfully saved for later!', 'success');
   }
     tellFriends() {
-        Swal('Yay, I donated!'):
+        Swal('Yay, I donated!');
     }
 
 }
